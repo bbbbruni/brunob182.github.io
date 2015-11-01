@@ -1,0 +1,395 @@
+@import "../partials/_generic.scss";
+
+*, 
+*:after, 
+*:before{ 
+	box-sizing: border-box;
+}
+html, 
+body, 
+div,  
+span, 
+p, 
+img,
+small{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+
+html {
+	font-family: 'raleway', 'Helvetica', sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+html, body{
+	width: 100%;
+	height:100%;
+}
+body{
+	line-height: 1;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+p{
+	color:#444f5d;
+	line-height:1.4;
+	font-size:0.9em;
+}
+a{
+	text-decoration:none;
+}
+small{
+	font-size:0.9em;
+}
+section{
+	width: 100%;
+	float:left;
+	padding:30px 15px;
+}
+
+.ts{
+	margin-top:20px;
+}
+.bs{
+	margin-bottom:20px;
+}
+
+.tac{
+	text-align:center;
+}
+
+.opt{
+	opacity:0.5;
+}
+
+//Font size
+.ft-lg{
+	font-size:3em;
+}
+
+//Section com títulos
+.title-lg{
+	padding-bottom:30px;
+	color:#9da2a8;
+}
+.container{
+	max-width:1024px;
+	position: relative;
+	margin:auto;
+}
+
+.f-container{
+	width:100%;
+	position: relative;
+	padding: 0 15px;
+}
+//Classe genérica para posicionamento central com absolute
+%mid{
+	position: absolute;
+	top:50%;
+	left:50%;
+	@include transform(translate(-50%, -50%));
+} 
+
+.tip:before {
+	content: '';
+	position: absolute; 
+}
+.tip:after{
+	content:attr(data-tip);
+	position: absolute;
+	color:#fff;
+	font-size:12.5px;
+	text-align:center;
+	background:rgba(#000, .5);
+	padding:5px 15px;
+	border:2px solid rgba(#000, .2);
+	border-radius:3px;
+	visibility:hidden;
+	opacity:0;
+	@include transition(all 0.1s ease-in-out);
+}
+.tip.top:before,
+.tip.top:after,
+.tip.bottom:before,
+.tip.bottom:after{
+	left:50%;
+	@include transform(translateX(-50%));   
+}
+
+.tip.top:after{
+	top:0;
+}
+
+.social .tip.top:after{
+	top:-30px;
+}
+
+.social .tip:hover:after{
+	visibility:visible;
+	opacity: 1;
+	top:-40px;
+}
+
+
+.intro{
+	width: 100vw;
+	height: 100vh; 
+	position: relative;
+	text-align: center;
+	background: linear-gradient(to bottom, rgba(16, 93, 179, 0.26), #616a73), url("../img/bg.jpg") no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	overflow:hidden;
+	padding: 0;
+	.content{
+		width: 100%;
+		.title{
+			font-size: 4em;
+			font-weight: 600;
+		}
+		.description{
+			font-weight: 100;
+			padding-top: 10px;
+			display: block;
+			font-style: italic;
+			color:#ccc;
+		}
+		.filter{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(61, 81, 103, 0.39));			
+		}
+	}
+}
+.float-intro{
+	@extend %mid;
+}
+
+.social{
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+	.box{
+		$size:20px;
+		position: relative;
+		display: inline-block;
+		opacity:0.9;
+		border-radius:100%;
+		padding: $size;
+		margin: 0 5px;
+		@include transition(all 0.25s ease-in-out);
+		&:hover{
+			box-shadow:0px 4px 3px rgba(#000, .3);
+		}
+		&:active{
+			top:1px;
+			position: relative;
+			box-shadow:0px 2px 1px rgba(#000, .3);
+		}
+		background-size: 23px;
+	}
+	opacity: 0;
+	animation:appear 1s ease-in-out forwards;
+	-webkit-animation:appear 1s ease-in-out forwards;
+	animation-delay:0.5s;
+}
+@include keyframes(appear){
+	0%{
+		bottom:20px;
+
+	}
+	100%{
+		opacity: 1;
+		bottom:70px;
+	} 
+}
+
+.gh{
+	$qt:.60; //quantidade de opacidade
+	$opt:rgba(#fff, $qt);
+	$bg: url('../img/gh.png') no-repeat center, $opt;
+	background:$bg;
+}
+.cp{
+	$qt:.60; //quantidade de opacidade
+	$opt:rgba(#fff, $qt);
+	$bg: url('../img/cp.png') no-repeat center, $opt;
+	background:$bg;
+}
+.in{
+	$qt:.60; //quantidade de opacidade
+	$opt:rgba(#fff, $qt);
+	$bg: url('../img/in.png') no-repeat center, $opt;
+	background:$bg;
+}
+
+//Sobre
+.about{
+	padding-top:90px;
+	padding-bottom:90px;
+}
+
+//Portfólio
+.portfolio{
+	background:#f9f9f9;
+	padding-top: 90px;
+}
+
+
+.item-job{
+	$size:150px;
+	width: 100%;
+	min-height:200px;
+	float:left;
+	border-radius:4px;
+	padding:0 15px;
+	background:#ddd;
+	position: relative;
+	@include transition(all 0.25s ease-in-out);
+	&:hover{
+		box-shadow:0px 0px 2px 1px rgba(#000, .3);
+	}
+	.job1{
+		background:linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.31)), url('../img/job1.jpg') no-repeat center;
+	}
+	.job2{ 
+		background:linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.31)), url('../img/job2.jpg') no-repeat center;
+	}
+	.job3{ 
+		background:linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.31)), url('../img/job3.jpg') no-repeat center;
+	}
+	.job4{ 
+		background:linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.31)), url('../img/job4.jpg') no-repeat center;
+	}
+	.photo{
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:$size;
+		background-size:cover;
+	}
+	.btn{
+		width: 100%;
+		text-align: center;
+		padding: 7px;
+		border-radius: 3px;
+		font-size: 14px;
+		background: #1590D2;
+		color: #fff;
+		border: 2px solid transparent;
+		display: inline-block;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		@include transition(all 0.25s ease-in-out);
+		&:hover{
+			background:darken(#1590D2, 10);
+			border: 2px solid darken(#1590D2, 15);
+		}
+		&:active{
+			top:2px;
+			position: relative;
+		}
+	}
+	.info{
+		padding-top:$size + 15px;
+		p{
+			font-size:0.8em
+		}
+	}
+}
+
+
+//media queries
+@media (min-width:900px){
+	.negative-space{
+		margin-left:-30px;
+	}
+}
+
+@media (min-width:768px){
+	.social{
+		.box{
+			$size:30px;
+			padding: $size;
+			background-size: 30px;
+		}
+	}
+	p{
+		font-size:1em;
+	}
+
+	.box-3{
+		width: 33.333%;
+		margin-bottom:15px;
+		padding:0 15px;
+		float:left;
+	}
+
+}
+
+@media (max-width:768px){
+	.intro{	
+		.content{
+			.title{
+				font-size: 1.1em;
+			}
+			.description{
+				font-size: 0.7em;
+			}
+		}
+	}
+	.box-3{
+		width: 50%;
+		margin-bottom:15px;
+		padding:0 15px;
+		float:left;
+	}
+	.negative-space{
+		margin-left:-15px;
+	}
+}
+@media (max-width:480px){
+	.intro{	
+		.content{
+			.title{
+				font-size: 1.1em;
+			}
+			.description{
+				font-size: 0.7em;
+			}
+		}
+	}
+	.box-3{
+		width: 100%;
+		margin-bottom:15px;
+		padding:0 15px;
+		float:left;
+	}
+}
+

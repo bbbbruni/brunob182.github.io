@@ -1,0 +1,35 @@
+@mixin transition($property){
+	transition:$property;
+	-ms-transition:$property;
+	-moz-transition:$property;
+	-webkit-transition:$property;
+}
+
+@mixin transform($property){
+	transform:$property;
+	-ms-transform:$property;
+	-moz-transform:$property;
+	-webkit-transform:$property;
+}
+
+@mixin flex{
+	display:flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
+}
+
+@mixin keyframes($property) {
+  @-webkit-keyframes #{$property} {
+    @content; 
+  }
+  @-moz-keyframes #{$property} {
+    @content;
+  }
+  @-ms-keyframes #{$property} {
+    @content;
+  }
+  @keyframes #{$property} {
+    @content;
+  } 
+}
