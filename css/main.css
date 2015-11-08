@@ -21,7 +21,6 @@ small {
 }
 
 html {
-  font-family: 'raleway', 'Helvetica', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -32,6 +31,7 @@ html, body {
 }
 
 body {
+  font-family: 'raleway', 'Helvetica', sans-serif;
   line-height: 1;
 }
 
@@ -203,7 +203,7 @@ section {
 }
 
 .intro {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   text-align: center;
