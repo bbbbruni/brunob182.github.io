@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<!-- Adicionar outros metas para SEO -->
 		<meta charset="UTF-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="description" content="bruno almeida, desenvolvedor front end, curitiba">
+		<meta name="description" content="bruno de almeida, desenvolvedor front end, curitiba">
+		<meta name="keywords" content="desenvolvedor, front, end, Tecnologia, site, curitiba, desenvolvedor, bruno">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Bruno de Almeida -  Desenvolvedor front end</title>
-
-		<link rel="stylesheet" href="css/main.css">
+		
 		<link rel="stylesheet" href="fonts/fonts.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		
-		<section class="intro">
+		<header>
+			<div class="nav">
+				<ul>
+					<li class="disable"><a href="#intro-site">home</a></li>
+					<li><a href="#about-me">sobre</a></li>
+					<li><a href="#my-portfolio">portfólio</a></li>
+				</ul>
+			</div>
+		</header>
+		<section id="intro-site" class="intro">
 			<div class="content">
-			        <div class="filter"></div>
-			        <video autoplay loop class="fillWidth">
-			            <source src="video/MP$/For_Wes.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-			            <source src="video/WEBM/For_Wes.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-			        </video>
 
 			    <div class="float-intro">
 				    <h1 class="title">
@@ -28,7 +31,7 @@
 					<h1 class="description">
 						Desenvolvedor front end
 					</h1>
-			    </div>	
+			    </div>
 
 			</div>
  			<div class="social">
@@ -38,7 +41,7 @@
  			</div>
 		</section>
 
-		<section class="about">
+		<section id="about-me" class="about">
 			<div class="container">
 				<h1 class="title-lg ft-lg">Sobre</h1>
 				<p class="ts">Olá, me chamo Bruno, moro em Curitiba e sou desenvolvedor front-end com experiência na área a mais de 1 ano e meio. Apesar de pouco tempo de experiência, sou um profissional responsável e tento sempre fazer o melhor trabalho!</p>
@@ -50,7 +53,7 @@
 			</div>
 		</section>
 
-		<section class="portfolio">
+		<section id="my-portfolio" class="portfolio">
 				<div class="container bs">
 					<h1 class="title-lg ft-lg">Portfólio</h1>
 					<p >Projetos que participei, desenvolvendo o front end com HTML, CSS E JQuery. Além de pensar na performance, usabilidade e semântica.</p>
@@ -129,8 +132,8 @@
  				<small class="opt ts">Desenvolvido por Bruno de Almeida.</small>
  			</div>
 		</section>
-
+		
+		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
-
