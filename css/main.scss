@@ -1,73 +1,4 @@
-@import "../partials/_generic.scss";
-
-*, 
-*:after, 
-*:before{ 
-	box-sizing: border-box;
-}
-html, 
-body, 
-div,  
-span, 
-p, 
-img,
-small{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-
-
-html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-
-html, body{
-	width: 100%;
-	height:100%;
-}
-body{
-	font-family: 'Raleway', 'Helvetica', sans-serif;
-	line-height: 1;
-}
-
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6{
-	margin: 0;
-	padding: 0;
-}
-ul{
-	margin: 0;
-	padding: 0;
-}
-li{
-	list-style: none;
-}
-p{
-	color:#444f5d;
-	line-height:1.4;
-	font-size:0.9em;
-}
-a{
-	text-decoration:none;
-}
-small{
-	font-size:0.9em;
-}
-section{
-	width: 100%;
-	float:left;
-	padding:30px 15px;
-}
+@import "partials/_generic.scss";
 
 .ts{
 	margin-top:20px;
@@ -81,7 +12,7 @@ section{
 }
 
 .opt{
-	opacity:0.5;
+	opacity:0.5; 
 }
 
 //Font size
@@ -98,6 +29,7 @@ section{
 	max-width:1024px;
 	position: relative;
 	margin:auto;
+	padding: 0 15px;
 }
 
 .f-container{
@@ -111,11 +43,11 @@ section{
 	top:50%;
 	left:50%;
 	@include transform(translate(-50%, -50%));
-} 
+}
 
 .tip:before {
 	content: '';
-	position: absolute; 
+	position: absolute;
 }
 .tip:after{
 	content:attr(data-tip);
@@ -136,7 +68,7 @@ section{
 .tip.bottom:before,
 .tip.bottom:after{
 	left:50%;
-	@include transform(translateX(-50%));   
+	@include transform(translateX(-50%));
 }
 
 .tip.top:after{
@@ -159,6 +91,7 @@ section{
 	position: fixed;
 	z-index: 5;
 	padding-right:50px;
+	display: none;
 	ul{
 		padding: 0;
 		margin: 0;
@@ -166,14 +99,14 @@ section{
 		li{
 			float:left;
 			a{
-			    display: block;
-			    font-weight: bold;
-			    margin: 20px 10px;
-			    color: #3C4B5A;
-			    @include transition(all 0.2s ease-in-out);
-			    &:hover{
-			    	color:rgba(60, 75, 90, 0.62);
-			    }
+				display: block;
+				font-weight: bold;
+				margin: 20px 10px;
+				color: #3C4B5A;
+				@include transition(all 0.2s ease-in-out);
+				&:hover{
+					color:rgba(60, 75, 90, 0.62);
+				}
 			}
 		}
 	}
@@ -181,38 +114,47 @@ section{
 		visibility:hidden;
 		opacity: 0;
 	}
+
+	@include responsive(min-sm){
+		display: block;
+	}
 }
 
 .intro{
 	width: 100vw;
-	height: 100vh; 
+	height: 100vh;
 	position: relative;
 	text-align: center;
 	background: linear-gradient(to bottom, rgba(24, 35, 47, 0.26), #223240), url("../img/bg.jpg") no-repeat center;
 	background-size: cover;
-	background-attachment: fixed;
 	color: #fff;
 	overflow:hidden;
 	padding: 0;
+
+	@include responsive(min-sm){
+		background-attachment: fixed;
+	}
+
 	.content{
 		width: 100%;
-		.title{
-			font-size: 4em;
-			font-weight: 600;
-			animation:appear-txt 1s ease-in-out;
-			animation-delay:0.2s;
-		}
-		.description{
-			font-weight: 100;
-			padding-top: 10px;
-			display: block;
-			font-style: italic;
-			color:#ccc;
-			position: relative;
-			animation:appear-txt 2s ease-in-out;
-		}
+	}
+	.title{
+		font-size: 4em;
+		font-weight: 600;
+		animation:appear-txt 1s ease-in-out;
+		animation-delay:0.2s;
+	}
+	.description{
+		font-weight: 100;
+		padding-top: 10px;
+		display: block;
+		font-style: italic;
+		color:#ccc;
+		position: relative;
+		animation:appear-txt 2s ease-in-out;
 	}
 }
+
 @include keyframes(appear-txt){
 	0%{
 		opacity: 0;
@@ -262,7 +204,7 @@ section{
 	100%{
 		opacity: 1;
 		bottom:70px;
-	} 
+	}
 }
 
 .gh{
@@ -294,6 +236,12 @@ section{
 .portfolio{
 	background:#f9f9f9;
 	padding-top: 90px;
+	padding-bottom:90px;
+}
+
+//footer
+.info {
+	margin:50px 0;
 }
 
 
@@ -313,13 +261,13 @@ section{
 	.job1{
 		background:linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.31)), url('../img/job1.jpg') no-repeat center;
 	}
-	.job2{ 
+	.job2{
 		background:linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.31)), url('../img/job2.jpg') no-repeat center;
 	}
-	.job3{ 
+	.job3{
 		background:linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.31)), url('../img/job3.jpg') no-repeat center;
 	}
-	.job4{ 
+	.job4{
 		background:linear-gradient(to bottom, rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.31)), url('../img/job4.jpg') no-repeat center;
 	}
 	.photo{
@@ -390,7 +338,7 @@ section{
 }
 
 @media (max-width:768px){
-	.intro{	
+	.intro{
 		.content{
 			.title{
 				font-size: 1.1em;
@@ -411,7 +359,7 @@ section{
 	}
 }
 @media (max-width:480px){
-	.intro{	
+	.intro{
 		.content{
 			.title{
 				font-size: 1.1em;
@@ -428,4 +376,3 @@ section{
 		float:left;
 	}
 }
-

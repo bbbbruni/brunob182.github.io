@@ -1,0 +1,79 @@
+@mixin transition($property){
+	transition:$property;
+	-ms-transition:$property;
+	-moz-transition:$property;
+	-webkit-transition:$property;
+}
+
+@mixin transform($property){
+	transform:$property;
+	-ms-transform:$property;
+	-moz-transform:$property;
+	-webkit-transform:$property;
+}
+
+@mixin flex{
+	display:flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+}
+
+@mixin keyframes($property) {
+	@-webkit-keyframes #{$property} {
+		@content;
+	}
+	@-moz-keyframes #{$property} {
+		@content;
+	}
+	@-ms-keyframes #{$property} {
+		@content;
+	}
+	@keyframes #{$property} {
+		@content;
+	}
+}
+
+
+// breakpoints
+$md: 968px;
+$sm: 768px;
+$xs: 480px;
+
+@mixin responsive($property) {
+	// 968px
+	@if $property == md {
+		@media (max-width:($m)) {
+			@content;
+		}
+	}
+	@if $property == min-md {
+		@media (min-width:($md)) {
+			@content;
+		}
+	}
+
+	// 769px
+	@if $property == sm {
+		@media (max-width:($sm)) {
+			@content;
+		}
+	}
+	@if $property == min-sm {
+		@media (min-width:($sm)) {
+			@content;
+		}
+	}
+
+	// 480px
+	@if $property == xs {
+		@media (max-width:($x)) {
+			@content;
+		}
+	}
+	@if $property == min-xs {
+		@media (min-width:($x)) {
+			@content;
+		}
+	}
+}
