@@ -1,0 +1,86 @@
+// Style on index page of the site
+@keyframes fadeBody {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideItem {
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+body {
+	opacity: 0;
+	animation: fadeBody .8s ease .6s forwards;
+}
+
+.about {
+	display: flex;
+	align-items: center;
+
+	@include responsive(sm) {
+		text-align: center;
+	}
+}
+
+.about__title--large,
+.about__title--info {
+	text-transform: uppercase;
+}
+
+.about__title--large {
+	font-size: 3rem;
+	color: #d6d6d6;
+	letter-spacing: -2px;
+	display: inline-block;
+
+	@include responsive(min-sm) {
+		font-size: 5rem;
+	}
+}
+
+.about__title--info {
+	margin-top: 10px;
+	font-size: 1.5rem;
+	color: #d6d6d6;
+}
+
+// Social navigation
+.social-nav {
+	margin-top: 30px;
+}
+
+.social-nav__item {
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 10px;
+	transform: translateY(10px);
+	opacity: 0;
+	transition: all .2s ease;
+	animation: slideItem .6s ease 1s forwards;
+
+	@include responsive(min-sm) {
+		margin-right: 20px;
+	}
+
+	a {
+		font-size: 1rem;
+		color: #666;
+		transition: color .2s ease;
+
+		&:hover {
+			color: tomato;
+		}
+
+		@include responsive(min-sm) {
+			font-size: 1.3rem;
+		}
+	}
+
+	&#{-1} { animation-duration: .3s; }
+	&#{-2} { animation-duration: .6s; }
+	&#{-3} { animation-duration: .9s; }
+}

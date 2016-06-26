@@ -1,0 +1,14 @@
+// Containers of the site
+.container {
+	width: 100%;
+	padding: 0 15px;
+	margin: auto; 
+
+	@include responsive(min-sm) {
+		max-width: 768px; 
+	}
+
+	@include responsive(min-md) {
+		max-width: 924px; 
+	}
+}
