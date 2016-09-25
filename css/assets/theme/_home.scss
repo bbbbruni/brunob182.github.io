@@ -60,7 +60,7 @@ body {
 	transform: translateY(10px);
 	opacity: 0;
 	transition: all .2s ease;
-	animation: slideItem .6s ease 1s forwards;
+	animation: slideItem .5s ease 1s forwards;
 
 	@include responsive(min-sm) {
 		margin-right: 20px;
@@ -81,7 +81,8 @@ body {
 		}
 	}
 
-	&#{-1} { animation-duration: .3s; }
-	&#{-2} { animation-duration: .6s; }
-	&#{-3} { animation-duration: .9s; }
+	&#{-1} { animation-duration: .2s; }
+	&#{-2} { animation-duration: .4s; }
+	&#{-3} { animation-duration: .6s; }
+	&#{-4} { animation-duration: .8s; }
 }
