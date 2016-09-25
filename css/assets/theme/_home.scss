@@ -79,6 +79,10 @@ body {
 			}
 		}
 
+		&:active::before {
+			width: 0;
+		}
+
 		@include responsive(min-sm) {
 			font-size: 1.3rem;
 		}

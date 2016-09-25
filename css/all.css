@@ -156,6 +156,8 @@ body {
       color: #2196F3; }
       .social-nav__item a:hover::before {
         width: calc(100% + 2px); }
+    .social-nav__item a:active::before {
+      width: 0; }
     @media (min-width: 768px) {
       .social-nav__item a {
         font-size: 1.3rem; } }
