@@ -154,10 +154,21 @@ body {
     color: #666;
     transition: color .2s ease; }
     .social-nav__item a:hover {
-      color: tomato; }
+      color: #2196F3; }
+      .social-nav__item a:hover::before {
+        width: 100%; }
     @media (min-width: 768px) {
       .social-nav__item a {
         font-size: 1.3rem; } }
+    .social-nav__item a::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 1px;
+      background: #5d5d5d;
+      transition: all .3s ease; }
   .social-nav__item-1 {
     animation-duration: .2s; }
   .social-nav__item-2 {

@@ -73,11 +73,26 @@ body {
 		transition: color .2s ease;
 
 		&:hover {
-			color: tomato;
+			color: #2196F3;
+
+			&::before {
+				width: 100%;
+			}
 		}
 
 		@include responsive(min-sm) {
 			font-size: 1.3rem;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 0;
+			height: 1px;
+			background: #5d5d5d;
+			transition: all .3s ease;
 		}
 	}
 
