@@ -169,13 +169,13 @@ body {
       background: #2fa2ff;
       transition: all 0.4s cubic-bezier(0.54, 0.44, 0.16, 1.28); }
   .social-nav__item-1 {
-    animation-duration: .2s; }
+    animation-duration: .3s; }
   .social-nav__item-2 {
-    animation-duration: .4s; }
-  .social-nav__item-3 {
     animation-duration: .6s; }
+  .social-nav__item-3 {
+    animation-duration: .9s; }
   .social-nav__item-4 {
-    animation-duration: .8s; }
+    animation-duration: .12s; }
 
 .clearfix::before,
 .clearfix::after {
