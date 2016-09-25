@@ -60,7 +60,7 @@ body {
 	transform: translateY(10px);
 	opacity: 0;
 	transition: all .2s ease;
-	animation: slideItem .5s ease 1s forwards;
+	animation: slideItem .5s cubic-bezier(0.32, 0.38, 0.37, 0.79) 1s forwards;
 
 	@include responsive(min-sm) {
 		margin-right: 20px;
