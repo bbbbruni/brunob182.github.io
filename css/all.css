@@ -156,7 +156,7 @@ body {
     .social-nav__item a:hover {
       color: #2196F3; }
       .social-nav__item a:hover::before {
-        width: 100%; }
+        width: calc(100% + 2px); }
     @media (min-width: 768px) {
       .social-nav__item a {
         font-size: 1.3rem; } }
@@ -164,11 +164,12 @@ body {
       content: '';
       position: absolute;
       top: 50%;
+      left: -2px;
       transform: translateY(-50%);
       width: 0;
       height: 1px;
-      background: #5d5d5d;
-      transition: all .3s ease; }
+      background: #2fa2ff;
+      transition: all 0.4s cubic-bezier(0.54, 0.44, 0.16, 1.28); }
   .social-nav__item-1 {
     animation-duration: .2s; }
   .social-nav__item-2 {

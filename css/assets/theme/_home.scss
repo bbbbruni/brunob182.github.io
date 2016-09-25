@@ -76,7 +76,7 @@ body {
 			color: #2196F3;
 
 			&::before {
-				width: 100%;
+				width: calc(100% + 2px);
 			}
 		}
 
@@ -88,11 +88,12 @@ body {
 			content: '';
 			position: absolute;
 			top: 50%;
+			left: -2px;
 			transform: translateY(-50%);
 			width: 0;
 			height: 1px;
-			background: #5d5d5d;
-			transition: all .3s ease;
+			background: #2fa2ff;
+			transition: all .4s cubic-bezier(0.54, 0.44, 0.16, 1.28);
 		}
 	}
 
