@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% if site.posts.size == 0 %}
+  <h2>Nenhum post :/</h2>
+{% else %}
+  {% for post in site.posts %}
+      <div class="content">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <div class="post-item">
+            <h2>{{ post.title }}</h2>
+            <div class="date">
+              <time>{{ post.date | date_to_string  }}</time>
+            </div>
+          </div>
+        </a>
+      </div>
+  {% endfor %}
+{% endif %}
+
