@@ -7,11 +7,12 @@ layout: default
 {% if site.posts.size == 0 %}
   <h2>Nenhum post :/</h2>
 {% else %}
-  {% for post in site.posts %}
+  {% for post in site.posts %} 
     <div class="row-post">
       <a href="{{ post.url | prepend: site.baseurl }}" class="post-item">
         <h2 class="post__title">{{ post.title }}</h2>
         <p class="post-item__desc">{{ post.description }}</p>
+        {% include date-post.html %}
       </a>
     </div>
   {% endfor %}
