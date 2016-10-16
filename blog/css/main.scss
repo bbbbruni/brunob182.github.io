@@ -1,12 +1,16 @@
 ---
 ---
 
-@import '../_sass/mixin';
-@import '../_sass/vars';
+@import 'mixin';
+@import 'vars';
 
-@import '../_sass/base';
-@import '../_sass/helpers';
-@import '../_sass/colors';
-@import '../_sass/grid';
-@import '../_sass/layout';
-@import '../_sass/post';
+@import 'base';
+@import 'helpers';
+@import 'colors';
+@import 'grid';
+@import 'layout';
+@import 'post'; 
+
+.display {
+	background: #fff;
+}
