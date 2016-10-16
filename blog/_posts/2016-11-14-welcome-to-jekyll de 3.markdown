@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lorem ipsum dolor sit amet."
+title:  "Primeiro post, seja bem vindo!"
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam corrupti nesciunt magnam maiores obcaecati deleniti dignissimos pariatur repudiandae assumenda error!
 categories: jekyll update
 ---

@@ -1,0 +1,68 @@
+// Window breakpoints
+$xs-small : 300px;
+$xs	      : 480px;
+$sm		  : 768px;
+$md		  : 992px;
+$lg		  : 1200px;
+
+@mixin responsive($value) {
+	// 320px
+	@if $value == 'xs-small' {
+		@media (max-width: $xs-small) {
+			@content;
+		}
+	}
+	@if $value == 'min-xs-small' {
+		@media (min-width: $xs-small) {
+			@content;
+		}
+	}
+	
+	// 480px
+	@if $value == 'xs' {
+		@media (max-width: $xs) {
+			@content;
+		}
+	}
+	@if $value == 'min-xs' {
+		@media (min-width: $xs) {
+			@content;
+		}
+	}
+
+	// 768px
+	@if $value == 'sm' {
+		@media (max-width: $sm) {
+			@content;
+		}
+	}
+	@if $value == 'min-sm' {
+		@media (min-width: $sm) {
+			@content;
+		}
+	}
+	
+	// 992px
+	@if $value == 'md' {
+		@media (max-width: $md) {
+			@content;
+		}
+	}
+	@if $value == 'min-md' {
+		@media (min-width: $md) {
+			@content;
+		}
+	}
+	
+	// 1200
+	@if $value == 'lg' {
+		@media (max-width: $lg) {
+			@content;
+		}
+	}
+	@if $value == 'min-lg' {
+		@media (min-width: $lg) {
+			@content;
+		}
+	}
+}

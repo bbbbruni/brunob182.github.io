@@ -1,0 +1,23 @@
+<div class="post-date">
+  <time>
+    {% assign month = page.date | date: "%-m" %}
+    {{ page.date | date: "%-d" }}
+    de
+    {% case month %}
+        {% when '1' %}Outubro
+        {% when '2' %}Outubro
+        {% when '3' %}Outubro
+        {% when '4' %}Abril
+        {% when '5' %}Maio
+        {% when '6' %}Junho
+        {% when '7' %}Julho
+        {% when '8' %}Agosto
+        {% when '9' %}Setembro
+        {% when '10' %}Outubro
+        {% when '11' %}Novembro
+        {% when '12' %}Dezembro
+    {% endcase %}
+    de 
+    {{ page.date | date: "%Y" }}
+  </time>
+</div>

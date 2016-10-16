@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lorem ipsum dolor sit amet."
+title:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, optio."
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam corrupti nesciunt magnam maiores obcaecati deleniti dignissimos pariatur repudiandae assumenda error!
 categories: jekyll update
 ---
