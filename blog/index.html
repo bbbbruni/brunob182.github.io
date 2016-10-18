@@ -12,29 +12,7 @@ layout: default
       <a href="{{ post.url | prepend: site.baseurl }}" class="post-item">
         <h2 class="post__title">{{ post.title }}</h2>
         <p class="post-item__desc">{{ post.description }}</p>
-        <div class="post-date">
-         <time>
-           {% assign month = post.date | date: "%-m" %}
-           {{ post.date | date: "%-d" }}
-           de
-           {% case month %}
-           {% when '1' %}Outubro
-           {% when '2' %}Outubro
-           {% when '3' %}Outubro
-           {% when '4' %}Abril
-           {% when '5' %}Maio
-           {% when '6' %}Junho
-           {% when '7' %}Julho
-           {% when '8' %}Agosto
-           {% when '9' %}Setembro
-           {% when '10' %}Outubro
-           {% when '11' %}Novembro
-           {% when '12' %}Dezembro
-           {% endcase %}
-           de 
-           {{ post.date | date: "%Y" }}
-        </time>
-      </div>
+        {% include date-post.html %}
       </a>
     </div>
   {% endfor %}
