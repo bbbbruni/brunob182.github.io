@@ -12,8 +12,8 @@
 }
 
 body {
-	opacity: 0;
-	animation: fadeBody .8s ease .6s forwards;
+	opacity: 1;
+	//animation: fadeBody .8s ease .6s forwards; 
 }
 
 .about {
@@ -56,9 +56,9 @@ body {
 	display: inline-block;
 	text-transform: uppercase;
 	margin-right: 10px;
-	opacity: 0;
+	opacity: 1;
 	transition: all .2s ease;
-	animation: slideItem .5s cubic-bezier(0.32, 0.38, 0.37, 0.79) 1s forwards;
+	//animation: slideItem .5s cubic-bezier(0.32, 0.38, 0.37, 0.79) 1s forwards;
 
 	@include responsive(min-sm) {
 		margin-right: 20px;
@@ -96,12 +96,75 @@ body {
 			width: 0;
 			height: 1px;
 			background: #2fa2ff;
-			transition: all .4s cubic-bezier(0.54, 0.44, 0.16, 1.28);
+			transition: width .25s cubic-bezier(0.54, 0.44, 0.16, 1.28);
 		}
 	}
 
-	&#{-1} { animation-duration: .3s; }
-	&#{-2} { animation-duration: .6s; }
-	&#{-3} { animation-duration: .9s; }
-	&#{-4} { animation-duration: .12s; }
+	// &#{-1} { animation-duration: .3s; }
+	// &#{-2} { animation-duration: .6s; }
+	// &#{-3} { animation-duration: .9s; }
+	// &#{-4} { animation-duration: .12s; }
 }
+
+
+.little-projects {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #9AD6DD;
+	background-image: url('https://images.unsplash.com/photo-1478180142614-26cabe747dbc?ixlib=rb-0.3.5…=80&fm=jpg&crop=entropy&cs=tinysrgb&s=80898a9f70a140ed5c44de2ecf3f6221#_=_');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
+	top: 120%;
+	transition: transform .35s cubic-bezier(.77,0,.175,1);
+	animation: moveSection .5s ease 1s forwards;
+
+	&:hover {
+		transform: translateY(-60%);
+
+		.title__projects {
+			transform: translateY(-40%);
+		}
+	}
+}
+
+@keyframes moveSection {
+	100% {
+		top: 80%;
+	}
+}
+
+.container-projects {
+	width: 90%;
+	margin: auto;
+}
+
+.title__projects {
+	font-size: 5rem;
+	color: #98d6de;
+	text-align: center;
+	margin-top: -46px;
+	transition: transform .2s ease, text-shadow .8s;
+}
+
+.codepen__row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.codepen-item {
+	margin-top: 40px;
+	width: 33.33%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
