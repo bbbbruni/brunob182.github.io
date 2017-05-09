@@ -1,0 +1,18 @@
+
+html {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/ce/9c/94/ce9c949d6c73dbfb889f6036bac022dd.gif);
+    animation: born 6s ease infinite;
+    animation-direction: alternate;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes born {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1.5);
+	}
+}
