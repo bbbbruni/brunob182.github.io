@@ -2,3 +2,34 @@
 $md: 968px;
 $sm: 768px;
 $xs: 480px;
+
+// Variables
+:root {
+	--gutter: 1px;
+
+	--xsmall: 468px;
+	--small:  768px;
+	--medium: 768px;
+	--large:  768px;
+
+	--xs: calc(var(--xsmall) - var(--gutter));
+	--sm: calc(var(--small) - var(--gutter));
+	--md: calc(var(--medium) - var(--gutter));
+	--lg: calc(var(--large) - var(--gutter ));
+
+	--m-xs: var(--xsmall);
+	--m-sm: var(--small);
+	--m-md: var(--medium);
+	--m-lg: var(--large);
+}
+
+// @Media
+@custom-media --xs (width <= var(--xs));
+@custom-media --sm (width <= var(--sm));
+@custom-media --md (width <= var(--md));
+@custom-media --lg (width <= var(--large));
+
+@custom-media --m-xs (width >= var(--m-xs));
+@custom-media --m-sm (width >= var(--m-sm));
+@custom-media --m-md (width >= var(--m-md));
+@custom-media --m-lg (width >= var(--m-large));
