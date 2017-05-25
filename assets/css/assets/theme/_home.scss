@@ -17,7 +17,7 @@ body {
 }
 
 body {
-	background-color: #56CCCF;
+	background-color: #B9EAEB;
 	overflow-x: hidden;
 }
 
@@ -53,7 +53,7 @@ body {
 	top: -100px;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.05);
 	transition: all .4s ease;
-	opacity: .9;
+	opacity: .8;
 
 	@media (max-width: 767px) {
 		left: 50%;
@@ -76,7 +76,7 @@ body {
 		top: -85px;
 		left: -160px;
 		background-color: transparent;
-		box-shadow: 0 0 60px 10px #4bbec1;
+		box-shadow: 0 0 60px 10px rgba(75, 190, 193, 0.19);
 		z-index: -1;
 		animation: rotateBoxxxxxx 30s linear infinite;
 	}    
