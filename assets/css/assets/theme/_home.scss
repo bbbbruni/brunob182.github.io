@@ -254,11 +254,11 @@ body {
 	width: 100%;
 	padding: 20px;
 	background-color: #101010;
-	
+	 
 	@media (max-width: 468px) {
 		&::before {
-			content: 'swipe know more below';
-			position: absolute;
+			content: 'swipe to know more below';
+			position: absolute; 
 			left: 50%;
 			bottom: calc(100% + 29px);
 			transform: translateX(-50%);
@@ -327,9 +327,20 @@ body {
 }
 
 .social__header-item {
-	&:hover {
-		&::before {
-			width: 100%;
+
+	@media (max-width: 767px) {
+		&:active {
+			&::before {
+				width: 100%;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		&:hover {
+			&::before {
+				width: 100%;
+			}
 		}
 	}
 
