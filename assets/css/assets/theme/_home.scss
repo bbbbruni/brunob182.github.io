@@ -25,7 +25,8 @@ body {
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center; 
+	overflow-x: hidden;
 
 	@media (min-width: 769px) {
 		height: calc(100% - 66px);
