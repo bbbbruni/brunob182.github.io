@@ -1,8 +1,11 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 3rem;
+  padding: 2rem;
+  background-color: #08253314;
   overflow-x: hidden;
+  opacity: 0;
+  animation: helloDarknessMyOldFriend .4s .2s ease-in-out forwards;
 }
 
 @media (min-width: 768px) {
@@ -11,41 +14,62 @@ body {
   }
 }
 
-h1 {
-  font-size: 4rem;
-  line-height: 1.2;
-  word-break: break-word;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 
-h2 {
-  font-size: 4rem;
-  line-height: 1.2;
+/*
+  Header
+*/
+
+h1 {
+  max-width: 240px;
+  font-size: 1.5rem;
+  line-height: 1.5;
   word-break: break-word;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 6rem;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  h2 {
-    font-size: 6rem;
-    line-height: 1.5;
+    max-width: 800px;
+    font-size: 5.5rem;
+    line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 }
 
+
+/*
+  Description
+*/
+
+.description {
+  max-width: 380px;
+  margin: 20px 0 0px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    max-width: 525px;
+    margin: 40px 0 0px;
+    font-size: 1.9rem;
+  }
+}
+
+.description > span {
+  text-decoration: underline;
+}
+
+
+/*
+  Networking
+*/
+
 .social {
   position: fixed;
-  bottom: 3rem;
+  bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -59,31 +83,37 @@ h2 {
   }
 }
 
-.social > li {
+.social > li:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
 .social__item {
   position: relative;
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   color: #000;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  transition: all .2s ease;
 }
 
-.social__item::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: white;
-  transform: translateY(-50%);
-  transition: height 0.2s ease;
+@media screen and (min-width: 768px) {
+  .social__item {
+    font-size: 1.6rem;
+  }
 }
 
-.social__item:hover::before {
-  height: 8px;
+.social__item:hover {
+  opacity: .2;
+}
+
+
+/*
+  Keyframes
+*/
+
+@keyframes helloDarknessMyOldFriend {
+  100% {
+    opacity: 1;
+  }
 }
