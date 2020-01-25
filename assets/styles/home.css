@@ -54,12 +54,12 @@ h1 {
   .description {
     max-width: 525px;
     margin: 40px 0 0px;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 
 .description > span {
-  text-decoration: underline;
+  font-style: italic;
 }
 
 
